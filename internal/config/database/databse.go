@@ -82,7 +82,7 @@ func ConnectDB() *sql.DB {
 	dsn, err := dbValue.GetDBConnectionDsn()
 
 	if err != nil {
-		// either initialize it or log an error
+		log.Fatal(err)
 	}
 
     db, err := sql.Open("mysql", dsn)
@@ -90,6 +90,7 @@ func ConnectDB() *sql.DB {
 	if err != nil {
 		log.Printf("Error %s when opening DB\n", err)
 	}
+	defer db.Close()
 	db.SetMaxOpenConns(20)
 	db.SetMaxIdleConns(20)
 	db.SetConnMaxLifetime(time.Minute * 5)

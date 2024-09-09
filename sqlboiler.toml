@@ -1,0 +1,18 @@
+output = "db/models" 
+
+wipe = true
+
+pkgname = "dbmodels"
+
+add-global-variants = true
+
+add-enum-types = true
+
+[mysql]
+dbname = "sakila"
+host = "localhost"
+port = 3306
+user = "root"
+pass = "admin"
+sslmode = "false"
+tinyint_as_int = true

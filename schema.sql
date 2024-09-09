@@ -1,0 +1,15 @@
+-- CREATE TABLE user (
+--     user_id INT PRIMARY KEY,
+--     username VARCHAR(50) NOT NULL,
+--     email VARCHAR(100) NOT NULL,
+--     password VARCHAR(100) NOT NULL,
+--     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+-- );
+
+-- CREATE TABLE todo (
+--     todo_id INT PRIMARY KEY,
+--     user_id INT,
+--     task VARCHAR(255) NOT NULL,
+--     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+--     FOREIGN KEY (user_id) REFERENCES user(user_id)
+-- );
